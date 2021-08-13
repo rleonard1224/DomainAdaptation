@@ -6,7 +6,7 @@ Script to inference a dataset through a trained generator network
 import os, shutil
 
 # Specify directories
-imagesdir = '../dataset/images/'
+imagesdir = '../../data/dataset/images/'
 cyclegandir = '../../pytorch-CycleGAN-and-pix2pix/'
 datasetsdir = cyclegandir + 'datasets/test/'
 checkpointsdir = cyclegandir + 'checkpoints/test/'
