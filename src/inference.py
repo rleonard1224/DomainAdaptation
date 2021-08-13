@@ -10,7 +10,7 @@ imagesdir = '../../data/dataset/images/'
 cyclegandir = '../../pytorch-CycleGAN-and-pix2pix/'
 datasetsdir = cyclegandir + 'datasets/test/'
 checkpointsdir = cyclegandir + 'checkpoints/test/'
-modeldir = '../model/'
+modeldir = '../../model/'
 srcdir = ''
 
 # Transfer input dataset to test set
