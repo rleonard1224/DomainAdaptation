@@ -39,7 +39,7 @@ os.mkdir('../data/gandataset/ganimages/')
 for ifile, filename in enumerate(sorted(os.listdir('results/test/test_latest/images'))):
     if 'fake' in filename:
         filebase = filename.split('_')[0]
-        shutil.copy('results/test/test_latest/images'+filename,'../data/gandataset/ganimages/'+filebase+'.png')
+        shutil.copy('results/test/test_latest/images/'+filename,'../data/gandataset/ganimages/'+filebase+'.png')
 
 
 # shutil.copytree('results/test/test_latest/images', '../data/gandataset/ganimages/')
