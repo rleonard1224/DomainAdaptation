@@ -33,3 +33,6 @@ os.system('python test.py --dataroot datasets/test/testA --name test --model tes
 
 # Copy original dataset to new folder
 shutil.copytree('../data/dataset/', '../data/gandataset/')
+
+# Copy gan-inferenced dataset to new folder
+shutil.copytree('results/test/test_latest/images', '../data/gandataset/ganimages/')
