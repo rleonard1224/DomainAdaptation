@@ -24,7 +24,8 @@ for file in sorted(os.listdir(imagesdir)):
 # Transfer model to checkpoints directory
 os.makedirs(checkpointsdir)
 for file in sorted(os.listdir(modeldir)):
-    shutil.copy(modeldir + file, checkpointsdir + 'latest_net_G.pth')
+    # shutil.copy(modeldir + file, checkpointsdir + 'latest_net_G.pth')
+    shutil.copy(modeldir + file, checkpointsdir + sys.argv[1])
 
 # Transfer the updated networks.py file
 shutil.copy(srcdir + 'networks.py', cyclegandir + 'models/')
