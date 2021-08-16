@@ -8,11 +8,13 @@ import os, shutil, sys
 print(sys.argv)
 
 # Specify directories
-imagesdir = 'data/dataset/images/'
+# imagesdir = 'data/dataset/images/'
+imagesdir = sys.argv[1]
 cyclegandir = 'pytorch-CycleGAN-and-pix2pix/'
 datasetsdir = cyclegandir + 'datasets/test/'
 checkpointsdir = cyclegandir + 'checkpoints/test/'
-modeldir = 'data/model/'
+# modeldir = 'data/model/'
+modeldir = sys.argv[2]
 srcdir = 'DomainAdaptation/src/'
 
 # Transfer input dataset to test set
@@ -24,8 +26,8 @@ for file in sorted(os.listdir(imagesdir)):
 # Transfer model to checkpoints directory
 os.makedirs(checkpointsdir)
 for file in sorted(os.listdir(modeldir)):
-    # shutil.copy(modeldir + file, checkpointsdir + 'latest_net_G.pth')
-    shutil.copy(modeldir + file, checkpointsdir + sys.argv[1])
+    shutil.copy(modeldir + file, checkpointsdir + 'latest_net_G.pth')
+    # shutil.copy(modeldir + file, checkpointsdir + sys.argv[1])
 
 # Transfer the updated networks.py file
 shutil.copy(srcdir + 'networks.py', cyclegandir + 'models/')
