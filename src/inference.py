@@ -38,6 +38,7 @@ os.mkdir('../data/gandataset/ganimages/')
 # Copy gan-inferenced dataset to new folder
 for ifile, filename in enumerate(sorted(os.listdir('results/test/test_latest/images'))):
     if 'fake' in filename:
+        print('filename = {}'.format(filename))
         filebase = filename.split('_')[0]
         shutil.copy('results/test/test_latest/images/'+filename,'../data/gandataset/ganimages/'+filebase+'.png')
 
