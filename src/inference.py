@@ -32,4 +32,4 @@ os.chdir('pytorch-CycleGAN-and-pix2pix')
 os.system('python test.py --dataroot datasets/test/testA --name test --model test --no_dropout --netG resnet_3blocks')
 
 # Copy original dataset to new folder
-shutil.copytree('../data/dataset/', 'data/gandataset/')
+shutil.copytree('../data/dataset/', '../data/gandataset/')
