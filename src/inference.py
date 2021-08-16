@@ -3,7 +3,9 @@ Script to inference a dataset through a trained generator network
 '''
 
 # Import python libraries
-import os, shutil, subprocess
+import os, shutil, sys
+
+print(sys.argv)
 
 # Specify directories
 imagesdir = 'data/dataset/images/'
