@@ -29,7 +29,7 @@ shutil.copy(srcdir + 'networks.py', cyclegandir + 'models/')
 
 # Change directories to inference dataset through generator
 os.chdir('pytorch-CycleGAN-and-pix2pix')
-os.system('python test.py --dataroot datasets/test/testA --name test --model test --no_dropout --netG resnet_3blocks')
+os.system('python test.py --dataroot datasets/test/testA --name test --model test --no_dropout --netG resnet_3blocks --load_size 512')
 
 # Copy original dataset to new folder and create new directory for gan-inferenced images
 shutil.copytree('../data/dataset/', '../data/gandataset/')
