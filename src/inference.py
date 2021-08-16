@@ -11,7 +11,7 @@ cyclegandir = 'pytorch-CycleGAN-and-pix2pix/'
 datasetsdir = cyclegandir + 'datasets/test/'
 checkpointsdir = cyclegandir + 'checkpoints/test/'
 modeldir = 'data/model/'
-srcdir = ''
+srcdir = 'DomainAdaptation/src/'
 
 # Transfer input dataset to test set
 print(os.getcwd())
