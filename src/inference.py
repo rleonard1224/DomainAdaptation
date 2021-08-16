@@ -40,7 +40,7 @@ for ifile, filename in enumerate(sorted(os.listdir('results/test/test_latest/ima
     if 'fake' in filename:
         print('filename = {}'.format(filename))
         filebase = filename.split('_')[0]
-        shutil.copy('results/test/test_latest/images/'+filename,'../data/gandataset/ganimages/')
+        shutil.copy('results/test/test_latest/images/'+filename,'../data/gandataset/ganimages/'+filebase+'.png')
 
 
 # shutil.copytree('results/test/test_latest/images', '../data/gandataset/ganimages/')
