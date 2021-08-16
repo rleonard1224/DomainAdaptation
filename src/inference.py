@@ -3,14 +3,14 @@ Script to inference a dataset through a trained generator network
 '''
 
 # Import python libraries
-import os, shutil
+import os, shutil, subprocess
 
 # Specify directories
-imagesdir = '../../data/dataset/images/'
-cyclegandir = '../../pytorch-CycleGAN-and-pix2pix/'
+imagesdir = 'data/dataset/images/'
+cyclegandir = 'pytorch-CycleGAN-and-pix2pix/'
 datasetsdir = cyclegandir + 'datasets/test/'
 checkpointsdir = cyclegandir + 'checkpoints/test/'
-modeldir = '../../data/model/'
+modeldir = 'data/model/'
 srcdir = ''
 
 # Transfer input dataset to test set
@@ -26,3 +26,7 @@ for file in sorted(os.listdir(modeldir)):
 
 # Transfer the updated networks.py file
 shutil.copy(srcdir + 'networks.py', cyclegandir + 'models/')
+
+# Change directories to inference dataset through generator
+os.chdir('../../pytorch-CycleGAN-and-pix2pix')
+os.system('python test.py --dataroot datasets/test/testA --name test --model test --no_dropout --netG resnet_3blocks')
